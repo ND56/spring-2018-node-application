@@ -2,11 +2,6 @@ const express = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 
-// instantiate port variable; store port using for app
-// process.env is an object that stores all of our environment variables as
-// key-value pairs; we're looking for one that heroku will set, called "PORT";
-// This works great gor heroku, but not for our local server, so we set an
-// or condition to 3000
 const port = process.env.PORT || 3000
 const app = express()
 
@@ -56,8 +51,22 @@ app.get('/bad', (req, res) => {
   })
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    welcomeMessage: 'This is my portfolio page!'
+  })
+})
+
 // *** APPEND SERVER TO LOCAL PORT ***
 // ***********************************
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`)
 })
+
+
+// add a new projects page (need handler)
+// make new view file
+// render everyting header, footer, p can be portoflio
+// in partials header file, add new link for projects page
+// commit it; push to github; push to heroku remote, which will deploy live
