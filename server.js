@@ -2,7 +2,12 @@ const express = require('express')
 const hbs = require('hbs')
 const fs = require('fs')
 
-
+// instantiate port variable; store port using for app
+// process.env is an object that stores all of our environment variables as
+// key-value pairs; we're looking for one that heroku will set, called "PORT";
+// This works great gor heroku, but not for our local server, so we set an
+// or condition to 3000
+const port = process.env.PORT || 3000
 const app = express()
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -53,6 +58,6 @@ app.get('/bad', (req, res) => {
 
 // *** APPEND SERVER TO LOCAL PORT ***
 // ***********************************
-app.listen(3000, () => {
-  console.log('Server is up on port 3000')
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`)
 })
