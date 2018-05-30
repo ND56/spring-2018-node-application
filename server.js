@@ -63,10 +63,3 @@ app.get('/projects', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`)
 })
-
-
-// add a new projects page (need handler)
-// make new view file
-// render everyting header, footer, p can be portoflio
-// in partials header file, add new link for projects page
-// commit it; push to github; push to heroku remote, which will deploy live
