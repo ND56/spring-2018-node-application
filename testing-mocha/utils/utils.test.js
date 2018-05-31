@@ -1,16 +1,8 @@
 const utils = require('./utils')
 const expect = require('expect')
 
-// takes two asrguments, (1) the name, (2) callback
-// describe blocks are just used to add organization; you can nest them
-// for example, you might have another describe block for a complicated function
-// that has multiple tests
 describe('Utils', () => {
-  // tests defined in here are part of the Utils block
-  // so moving all tests to this block
 
-  // if you have a describe block for one method, the common syntax is to write
-  // it like this, with a pound sign
   describe('#add', () => {
     // Test Case #1 **************************************************
     // ***************************************************************

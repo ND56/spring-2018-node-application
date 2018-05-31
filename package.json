@@ -17,6 +17,7 @@
     "mocha": "^5.2.0"
   },
   "devDependencies": {
+    "rewire": "^4.0.1",
     "supertest": "^3.1.0"
   }
 }
